@@ -1,0 +1,488 @@
+html {
+    /* height: 100%; */
+}
+
+body {
+    margin: 0;
+    /* height: 100%; */
+    background-image: url(/img/fon.jpg);
+}
+
+/*=================Шапка сайта=================*/
+#header {
+    width: 100%;
+    height: 61px;
+    background: #6397b3;
+}
+
+#logo {
+    position: relative;
+    float: left;
+    width: 200px;
+    height: 100%;
+}
+
+#logo img {
+    position: absolute;
+    top: 3px;
+    left: 18px;
+    width: 45px;
+    height: 45px;
+}
+
+#logo span {
+    position: absolute;
+    top: 8px;
+    left: 70px;
+    color: #fff;
+    font-family: 'Lobster', cursive;
+    font-size: 30px;
+}
+
+#menu {
+    float: right;
+    height: 100%;
+}
+
+#menu a {
+    display: block;
+    float: left;
+    padding: 12px 10px 0 14px;
+    height: calc(100% - 12px);
+    margin-right: 22px;
+    font-size: 20px;
+    font-family: 'Lobster', cursive;
+    text-decoration: none;
+    color: #fff;
+}
+
+#menu a:hover {
+    background-color: #4b91a0;
+}
+a#open-login-exit{
+    color: #f9f6f6fa;
+    font-weight: 500;
+    /* border: 1px dashed #f0f5f7; */
+    color: #ffeb3bcf;
+    height: 79%;
+    width: 68px;
+}
+a#open-login-exit::after {
+    content: "";
+    background-image: url(/img/logout.png);
+    background-size: 27px 30px;
+    width: 30px;
+    height: 30px;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 10px;
+    left: 1314px;
+} 
+/*==============Левая колонка - Пользователи и Поиск ===========*/
+#content {
+    width: 800px;
+    height: 600px;
+    margin: 0 auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    background: #cccccc;
+    overflow: hidden;
+}
+
+#users {
+    float: left;
+    width: 200px;
+    height: 100%;
+}
+
+/*==================Поиск=====================*/
+#search {
+    width: 100%;
+    height: 25px;
+    padding: 10px;
+}
+
+#search button {
+    width: 27px;
+    height: 25px;
+    padding: 0;
+    border: none;
+    background: #f1f1f1;
+    outline: none;
+    cursor: pointer;
+}
+
+#search button:active {
+    background: #cccccc;
+}
+
+#search button img {
+    width: 100%;
+    height: 100%;
+}
+
+#search input {
+    float: left;
+    width: calc(100% - 40px - 30px);
+    height: 100%;
+    padding: 0 10px;
+    margin-right: 10px;
+    outline: none;
+    background: #f1f1f1;
+    border: none;
+}
+
+/*==================Левая колонка, Пользователи, Аватарка, имя======*/
+#list-users {
+    height: calc(100% - 45px);
+}
+#list-users ul {
+    padding: 0;
+    margin: 0;
+    height: 100%;
+    width: 100%;
+    list-style: none;
+    overflow-y: auto;
+}
+
+#list-users ul li a span {
+    display: block;
+}
+
+#list-users ul li {
+    position: relative;
+    width: calc(100% - 20px);
+    padding: 10px;
+}
+
+#list-users ul h2,
+#list-users ul p {
+    font-size: 14px;
+    font-family: 'Roboto';
+    margin: 0px;
+}
+
+#list-users ul h2 {
+    margin-bottom: 5px;
+    font-size: 20px;
+}
+
+#list-users ul .avatar {
+    float: left;
+    margin-right: 10px;
+    width: 50px;
+    height: 48px;
+}
+
+#list-users ul .avatar img {
+    width: 100%;
+    height: 100%;
+}
+
+#list-users ul li .time {
+    position: absolute;
+    top: 16px;
+    right: 13px;
+    font-size: 14px;
+}
+#list-users ul li a {
+    text-decoration: none;
+    color: #272626;
+}
+
+/*------- Стилизация scroll bar--------*/
+#list-users ul::-webkit-scrollbar-track,
+#list-message::-webkit-scrollbar-track,
+.modal::-webkit-scrollbar-track
+{
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+	border-radius: 10px;
+	background-color: #F5F5F5;
+}
+
+#list-users ul::-webkit-scrollbar,
+#list-message::-webkit-scrollbar,
+.modal::-webkit-scrollbar
+{
+	width: 12px;
+	background-color: #F5F5F5;
+}
+
+#list-users ul::-webkit-scrollbar-thumb,
+#list-message::-webkit-scrollbar-thumb,
+.modal::-webkit-scrollbar-thumb
+{
+	border-radius: 10px;
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+	background-color: #555;
+}
+/*--------Закончилась стилизация scroll bar--------------*/
+
+/*==============Правая колонка чат,сообщения,отправка========*/
+#message {
+    float: right;
+    width: calc(800px - 200px);
+    height: 100%;
+    overflow-y: auto;
+}
+#list-message {
+    height: 84%;
+    overflow-y: auto;
+}
+#list-message ul li a {
+    text-decoration: none;
+    color: #272626;
+}
+#message ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+#message ul .avatar {
+    float: left;
+    width: 50px;
+    height: 48px;
+    margin-right: 10px;
+}
+#message ul .avatar img {
+    width: 100%;
+    height: 100%;
+}
+#message ul h2,
+#message ul p {
+    font-size: 14px;
+    font-family: 'Roboto';
+    margin: 0px;
+}
+#message ul h2 {
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+
+#message ul li {
+    padding: 10px;
+    position: relative;
+}
+
+#message ul li .time {
+    position: absolute;
+    top: 16px;
+    right: 13px;
+    font-size: 14px;
+}
+/*============Форма для отправки сообщений===============*/
+#form {
+    padding: 10px;
+    height: calc(16% - 20px);
+    width: 548px;
+    /* position: absolute;
+    left: 508px;
+    top: 598px; */
+}
+#form button {
+    float: right;
+    width: 14%;
+    height: 66%;
+    background: none;
+    outline: none;
+    border: none;
+    cursor: pointer;
+}
+#form button img {
+    width: 100%;
+    height: 100%;
+}
+#form textarea {
+    font-size: 14px;
+    width: 83%;
+    height: 60%;
+}
+#form button:active {
+    background: #6d4f4f;
+}
+
+/*================Модальные окна==================*/
+.modal {
+    position:absolute;
+    top:128px;
+    left: calc(50% - 200px);
+    padding: 20px;
+    width: 360px;
+    max-height: 400px;
+    overflow-y: auto;
+    background-color: #fff;
+    border-radius: 10px;
+    border: 2px solid #6397b3;
+    z-index: 9999;
+}
+/*====================Модальное окно с контактами===============*/
+.close_contacts {
+    position: absolute;
+    top: 20px;
+    right: 10px;
+    width: 22px;
+    height: 22px;
+}
+.close_login {
+    position: absolute;
+    top: 20px;
+    right: 10px;
+    width: 22px;
+    height: 22px;
+}
+.close_reg {
+    position: absolute;
+    top: 20px;
+    right: 10px;
+    width: 22px;
+    height: 22px;
+}
+.close_login img {
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+}
+.close_contacts img {
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+}
+.close_reg img {
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+}
+.modal .content {
+    overflow-y: auto;
+}
+#contacts-modal {
+    display: none;
+}
+#contacts-modal ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+#contacts-modal ul .avatar {
+    float: left;
+    width: 50px;
+    height: 48px;
+    margin-right: 10px;
+}
+#contacts-modal ul .avatar img {
+    width: 100%;
+    height: 100%;
+}
+#contacts-modal ul h2,
+#contacts-modal ul p {
+    font-size: 14px;
+    font-family: 'Roboto';
+    margin: 0px;
+}
+#contacts-modal ul h2 {
+    font-size: 20px;
+    margin-bottom: 16px;
+}
+
+#contacts-modal ul li {
+    padding: 10px;
+    position: relative;
+}
+div[data-link] {
+    cursor:pointer;
+}
+/*====================Модальное окно Войти ==================*/
+
+#login-modal{
+    position:absolute;
+    top:76px;
+    left: calc(50% - 140px);
+    display: none;
+    padding: 20px;
+    width: 360px;
+    max-height: 400px;
+    overflow-y: auto;
+    background-color: #fff;
+    border-radius: 10px;
+    border: 2px solid #6397b3;
+}
+#login-button, #reg-button-submit {
+    margin-top: 30px;
+}
+/*------------Стилизировать кнопки---------------*/
+#login-button, #reg-button-submit {
+    padding: .8em 1em calc(.8em + 3px);
+    font-weight: 700;
+    color: white;
+    text-decoration: none;
+    border-radius: 3px;
+    background: rgb(64,199,129);
+    box-shadow: 0 -3px rgb(53,167,110) inset;
+    transition: 0.2s;
+    outline: none;
+    border: none;
+    cursor: pointer;
+  } 
+  #reg-button {
+    padding: 8px 13px 13px 14px;
+    height: 19px;
+    font-weight: 700;
+    color: white;
+    text-decoration: none;
+    border-radius: 3px;
+    background: rgb(64,199,129);
+    box-shadow: 0 -3px rgb(53,167,110) inset;
+    transition: 0.2s;
+    outline: none;
+    border: none;
+    cursor: pointer;
+  }
+  #login-button:hover { background: rgb(53, 167, 110); }
+  #login-button:active {
+    background: rgb(33,147,90);
+    box-shadow: 0 3px rgb(33,147,90) inset;
+  }
+  #reg-button:hover { background: rgb(53, 167, 110); }
+  #reg-button:active {
+    background: rgb(33,147,90);
+    box-shadow: 0 3px rgb(33,147,90) inset;
+  }
+  #form-login input {
+    width: calc(100% - 110px);
+    font-size: 18px;
+    outline: none;
+    height: 23px;
+  }
+
+/*----------------Форма Регистрации--------*/
+  #reg-modal {
+      display: none;
+  }
+  #form-reg input {
+    width: calc(100% - 110px);
+    font-size: 18px;
+    outline: none;
+    height: 23px;
+  }
+/*------------------Кнопка регистрации-------------*/
+#reg-button {
+    position: absolute;
+    left: 96px;
+    top: 226px;
+}
+/* Стили для placeholder*/
+::-webkit-input-placeholder {font-size: 13px; font-style: italic;}
+::-moz-placeholder          {font-size: 13px; font-style: italic;}/* Firefox 19+ */
+:-moz-placeholder           {font-size: 13px; font-style: italic;}/* Firefox 18- */
+:-ms-input-placeholder      {font-size: 13px; font-style: italic;}
+/* плавное изменение прозрачности  placeholder-а при фокусе */
+input::-webkit-input-placeholder       {opacity: 1; transition: opacity 0.3s ease;}
+input::-moz-placeholder                {opacity: 1; transition: opacity 0.3s ease;}
+input:-moz-placeholder                 {opacity: 1; transition: opacity 0.3s ease;}
+input:-ms-input-placeholder            {opacity: 1; transition: opacity 0.3s ease;}
+input:focus::-webkit-input-placeholder {opacity: 0; transition: opacity 0.3s ease;}
+input:focus::-moz-placeholder          {opacity: 0; transition: opacity 0.3s ease;}
+input:focus:-moz-placeholder           {opacity: 0; transition: opacity 0.3s ease;}
+input:focus:-ms-input-placeholder      {opacity: 0; transition: opacity 0.3s ease;}
+
+
